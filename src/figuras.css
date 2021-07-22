@@ -25,7 +25,7 @@ header {
 main {
     display: flex;
     flex-flow: row wrap;
-    height: 610px;
+    min-height: 610px;
     justify-content: space-evenly;
     align-items: center;
 }
