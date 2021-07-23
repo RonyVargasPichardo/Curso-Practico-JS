@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./figuras.css">
     <title>Figuras Geometricas | Curso Practico</title>
 </head>
 <body>
@@ -12,21 +13,20 @@
         <span>Este es el primer taller del Curso Practico de JavaScript</span>
     </header>
     <main>
-        <section>
+        <section class="item1 item">
             <h2>Cuadrado</h2>
-            <h3>Calcula el area y el perimetro del cuadrado</h3>
+            <h3>Escribe cuanto miden los lados de tu Cuadrado</h3>
             <form action="">
-                <label for="ladoCuadrado">Escribe cuanto miden los lados de tu Cuadrado</label>
+                <label for="ladoCuadrado">Lado</label>
                 <input type="number" name="ladoCuadrado" id="ladoCuadrado">
-                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
-                <button type="button" onclick="calcularAreaCuadrado()">Calcular Area</button>
+                <button type="button" class="btn" onclick="calcularPerimetroCuadrado()">Calcular Perimetro</button>
+                <button type="button" class="btn" onclick="calcularAreaCuadrado()">Calcular Area</button>
             </form>
         </section>
-        <section>
+        <section class="item2 item">
             <h2>Triangulo</h2>
-            <h3>Calcula el area y el perimetro del Triangulo</h3>
+            <h3>Escribe cuanto miden los lados de tu Triangulo</h3>
             <form action="">
-                <h4>Escribe cuanto miden los lados de tu Triangulo</h4>
                 <label for="lado1">Lado A</label>
                 <input type="number" name="lado1" id="lado1">
                 <label for="lado2">Lado B</label>
@@ -35,21 +35,38 @@
                 <input type="number" name="base" id="base">
                 <label for="altura">Altura</label>
                 <input type="number" name="altura" id="altura">
-                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
-                <button type="button" onclick="calcularAreaTriangulo()">Calcular Area</button>
+                <button type="button" class="btn" onclick="calcularPerimetroTriangulo()">Calcular Perimetro</button>
+                <button type="button" class="btn" onclick="calcularAreaTriangulo()">Calcular Area</button>
             </form>   
         </section>
-        <section>
+        <section class="item3 item">
             <h2>Circulo</h2>
-            <h3>Calcula el area y el perimetro del Circulo</h3>
+            <h3>Escribe cuanto mide el radio de tu Circulo</h3>
             <form action="">
-                <label for="radio">Escribe cuanto mide el radio de tu Circulo</label>
+                <label for="radio">Radio</label>
                 <input type="number" name="radio" id="radio">
-                <button type="button" onclick="calcularPerimetroCirculo()">Calcular Perimetro</button>
-                <button type="button" onclick="calcularAreaCirculo()">Calcular Area</button>
+                <button type="button" class="btn" onclick="calcularPerimetroCirculo()">Calcular Perimetro</button>
+                <button type="button" class="btn" onclick="calcularAreaCirculo()">Calcular Area</button>
             </form> 
         </section>
+        <section class="item4 item" >
+            <h2>Triangulo Isosceles</h2>
+            <h3>Escribe cuanto miden los lados de tu Triangulo Isosceles</h3>
+            <form action="">
+                <label for="ladoa">Lado A</label>
+                <input type="number" name="ladoa" id="ladoa">
+                <label for="ladob">Lado B</label>
+                <input type="number" name="ladob" id="ladob">
+                <label for="baseI">Base</label>
+                <input type="number" name="baseI" id="baseI">
+                <button type="button" class="btn" onclick="calcularAlturaTrianguloIsosceles()">Calcular Altura</button>
+            </form>   
+        </section>
     </main>
+    <footer>
+        <span>By Rony Vargas | julio de 2021 </span>
+    </footer>
+    
     
     
     <script src="./figuras.js"></script>

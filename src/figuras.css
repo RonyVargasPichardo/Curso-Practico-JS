@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: cursive;
+    background-image: url(https://i.imgur.com/GhBpBZj.jpg);
+}
+
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: brown;
+    color: #fff;
+    justify-content :space-evenly;
+    align-items: center;
+    box-shadow: 5px 0px 5px 0px #888888;
+    border-bottom: rgb(141, 12, 12);
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 610px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.item{ 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 400px;
+    flex-basis: 320px;
+    color: rgb(4, 30, 78);
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: 2px 5px 4px 5px #7e7970;
+}
+
+
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 74, 51);
+     padding: 5px;
+}
+
+
+h3 {
+    text-align: center;
+    border-bottom: 2px solid brown;
+}
+
+
+
+.btn {
+    background-color: rgb(141, 12, 12);
+    font-size: 14px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    color:rgb(241, 232, 232);
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+
+footer{
+    background-color: brown;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
