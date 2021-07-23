@@ -45,6 +45,8 @@ const AlturaTrianguloIsosceles = (lado1, lado2, base) =>{
 
 
 
+
+
 /* Circulo */
 const PI = Math.PI;
 
