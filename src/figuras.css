@@ -7,6 +7,7 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-family: cursive;
+    background-image: url(https://i.imgur.com/GhBpBZj.jpg);
 }
 
 
@@ -19,7 +20,8 @@ header {
     color: #fff;
     justify-content :space-evenly;
     align-items: center;
-    border-bottom: 2px solid black;
+    box-shadow: 5px 0px 5px 0px #888888;
+    border-bottom: rgb(141, 12, 12);
 }
 
 main {
@@ -33,16 +35,24 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    height: 400px;
+    min-height: 400px;
     flex-basis: 320px;
-    border: 2px solid black;
+    color: rgb(4, 30, 78);
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 10px;
     padding: 10px;
-    box-shadow:  10px 5px 5px red;;
+    margin: 20px;
+    box-shadow: 2px 5px 4px 5px #7e7970;
 }
+
 
 
 input {
     width: 100%;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 74, 51);
+     padding: 5px;
 }
 
 
@@ -54,11 +64,11 @@ h3 {
 
 
 .btn {
-    background-color: brown;
+    background-color: rgb(141, 12, 12);
     font-size: 14px;
-    font-family:monospace;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-radius: 5px;
-    color:white;
+    color:rgb(241, 232, 232);
     padding: 10px;
     margin-top: 10px;
     border: 2px solid black;
@@ -68,6 +78,8 @@ footer{
     background-color: brown;
     color: #fff;
     height: 50px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

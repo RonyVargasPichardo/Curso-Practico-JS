@@ -26,6 +26,24 @@ const areaTriangulo = (base, altura) => {
 console.groupEnd();
 
 
+/* Triangulo Isosceles*/
+
+
+const AlturaTrianguloIsosceles = (lado1, lado2, base) =>{
+    lado1 = parseInt(lado1);
+    lado2 = parseInt(lado2);
+    base = parseInt(base);
+    if(lado1 === lado2 && lado1 != '' && lado2 != '' && base != ''){
+        let h;
+        base /= 2;
+        h = (lado2**2) - (base**2);
+        alert(`La altura de tu triangulo mide: ${Math.sqrt(h).toFixed(2)}cm`)
+    } else{
+        alert('Verifica tus valores')
+    }
+}
+
+
 
 /* Circulo */
 const PI = Math.PI;
@@ -48,7 +66,7 @@ console.groupEnd();
 
 /// calculado el area y perimetro de las figuras geometricas con html integrando JS
 
-
+//Cuadrado
 function calcularPerimetroCuadrado(){ 
     const inputCuadrado = document.getElementById('ladoCuadrado');
     const valueCuadrado = parseInt(inputCuadrado.value);
@@ -60,6 +78,8 @@ function calcularAreaCuadrado(){
     areaCuadrado(valueCuadrado);
 }
 
+
+//Triangulo
 function calcularPerimetroTriangulo(){ 
     const inputTrianguloL1 = parseInt(document.getElementById('lado1').value);
     const inputTrianguloL2 = parseInt( document.getElementById('lado2').value);
@@ -73,6 +93,10 @@ function calcularAreaTriangulo(){
 
     areaTriangulo(inputTrianguloB, inputTrianguloA)
 }
+
+
+
+//Circulo
 function calcularPerimetroCirculo(){ 
     const inputRadio = parseInt(document.getElementById('radio').value);
 
@@ -81,6 +105,16 @@ function calcularPerimetroCirculo(){
 function calcularAreaCirculo(){ 
     const inputRadio = parseInt(document.getElementById('radio').value);
     areaCirculo(inputRadio);
+}
+
+
+//Triangulo Isosceles
+function calcularAlturaTrianguloIsosceles (){
+    const inputIsoscelesL1 = document.getElementById('ladoa').value;
+    const inputIsoscelesL2 = document.getElementById('ladob').value;
+    const inputIsoscelesB = document.getElementById('baseI').value;
+
+    AlturaTrianguloIsosceles(inputIsoscelesL1, inputIsoscelesL2, inputIsoscelesB);
 }
 
 
