@@ -14,17 +14,20 @@
     </header>
     <main>
         <section class="container-calcular-precio">
-            <h3>Calcular el Precio del descuento de un producto</h3>
+            <h3>Calcular el Precio con descuento de un producto</h3>
             <form action="">
                 <label for="precio">Escribe los valores de tu producto</label>
                 <label for="precio">Precio</label>
                 <input type="number" name="precio" id="precio">
-                <label for="Descuento">Descuento</label>
-                <input type="number" name="Descuento" id="Descuento">
-                <button id="btn-calcular">Precio con Descuento</button>
+                <label for="descuento">Descuento</label>
+                <input type="number" name="descuento" id="descuento">
+                <button type="button" id="btn-calcular" onclick="calcularPrecioConDescuento()">Precio con Descuento</button>
             </form>
             <div class="container-valor-precio">
-                <p id="resultPrecio"></p>
+                <fieldset>
+                    <legend>Result</legend>
+                    <p id="resultPrecio"></p>
+                </fieldset>
             </div>
         </section>
     </main>
