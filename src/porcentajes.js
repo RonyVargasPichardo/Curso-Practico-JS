@@ -2,9 +2,45 @@
 
 /**Calcular Precio con descuento de un articulo*/
 
+//accedo a los input del html y el elemento de resultado
 const result = document.getElementById('resultPrecio');
 const precio = document.getElementById('precio');
-const descuento = document.getElementById('descuento');
+const coupon = document.getElementById('cupon');
+
+// crear un array de objetos de cupones.
+const coupons = [
+    {   name: 'diamante', discount: 50, },
+    {   name: 'oro'     , discount: 25, },
+    {   name: 'plata'   , discount: 15, },
+];
+
+
+
+//creo funciones para validar mis datos y se cumpla el descuento de los cupones
+function calcularPrecioConDescuento(){
+    const precioValue = parseFloat(precio.value);
+    const couponValue = coupon.value;
+    //arrow function para validar que los cupones sean correctos
+    const isCouponValueValid = coupon => coupon.name === couponValue;
+    const userCoupon = coupons.find(isCouponValueValid);
+
+    
+    if(!precioValue || !couponValue){
+        result.innerText = `Ingresa los datos`;
+    }
+    else if(!userCoupon){
+        result.innerText = `El cupon '${couponValue}' no es valido`;
+    } 
+    else{
+        const descuento = userCoupon.discount;
+
+        PrecioConDescuento(precioValue, descuento);
+        precio.value = '';
+        cupon.value = '';
+    }
+   
+    
+}
 
 const PrecioConDescuento = (precio, descuento) =>{
     //formula    precio * (100% - descuento%) / 100
@@ -12,21 +48,11 @@ const PrecioConDescuento = (precio, descuento) =>{
     const PrecioConDescuento = (precio * porcentajeDelDescuento ) / 100;
 
     return result.innerText = `El articulo cuesta $${precio}
-Tiene un descuento del ${descuento}%
+Tiene un ${descuento}% de descuento 
 Con el descuento pagarias solamente $${PrecioConDescuento}.`;
 
 }
 
-function calcularPrecioConDescuento(){
-    const precioValue = parseFloat(precio.value);
-    const descuentoValue = parseFloat(descuento.value);
-    
-    if(!precioValue || !descuentoValue){
-        result.innerText = `Ingresa los datos`;
-    }else {
-        PrecioConDescuento(precioValue, descuentoValue);
-        precio.value = '';
-        descuento.value = '';
-    }
-    
-}
+
+
+
