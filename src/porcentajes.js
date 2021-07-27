@@ -24,7 +24,7 @@ function calcularPrecioConDescuento(){
     const isCouponValueValid = coupon => coupon.name === couponValue;
     const userCoupon = coupons.find(isCouponValueValid);
 
-    
+    //valido mis datos
     if(!precioValue || !couponValue){
         result.innerText = `Ingresa los datos`;
     }
@@ -34,12 +34,10 @@ function calcularPrecioConDescuento(){
     else{
         const descuento = userCoupon.discount;
 
-        PrecioConDescuento(precioValue, descuento);
+        PrecioConDescuento(precioValue, descuento); //llamo a la funcion par calcular
         precio.value = '';
         cupon.value = '';
     }
-   
-    
 }
 
 const PrecioConDescuento = (precio, descuento) =>{
