@@ -29,27 +29,27 @@ console.log(calcPromedio([1,2,3,4]));
     Aqui uso el modulo de js que consiste en revisar si una
     division no deja residuo(ej: 0.2) el residuo seria el numero(2)    */
 
-
-
 function calcularLaMediana(lista) {
-    let mitadLista = parseInt(lista.length / 2) ;
-    const esPar = longitudLista => (longitudLista % 2 === 0); //arrow funcion, retorna true o false
+    const ordenar = lista => lista.sort((a, b) => a - b ) // metodo .sort este recibe una funcion para ordenarlo de forma adecuada; 
+    const listaOrdenada = ordenar(lista);   // ordena una lista desordenada de array, compara un elemento con otro.
+    let mitadLista = parseInt(listaOrdenada.length / 2) ;    //divido la listaOrdenada en dos para encontrarle la mitad 
+    const esPar = longitudLista => (longitudLista % 2 === 0); //arrow funcion, retorna true o false, para saber si la lista es par o impar
     let mediana;
 
-    if (esPar(lista.length)){
-        let num1 , num2; //lo dos numeros del medio de la lista
+    if (esPar(listaOrdenada.length)){
+        let num1 , num2; //lo dos numeros del medio de la listaOrdenada
         num1 = mitadLista;
         num2 = --mitadLista;
-        mediana = (lista[num1] + lista[num2]) / 2 // encuentro su media aritmetica, resultado obtengo la mediana de la lista
-        console.log(`La mediana de esta lista ${lista} es: ${mediana}`); 
+        mediana = (listaOrdenada[num1] + listaOrdenada[num2]) / 2 // encuentro su media aritmetica, resultado obtengo la mediana de la listaOrdenada
+        console.log(`La mediana de esta lista ${listaOrdenada} es: ${mediana}`); 
     }
     else {
-        mediana = lista[mitadLista];
-        console.log(`La mediana de esta lista ${lista} es: ${mediana}`)
+        mediana = listaOrdenada[mitadLista];
+        console.log(`La mediana de esta lista ${listaOrdenada} es: ${mediana}`)
     }
 }
 
-calcularLaMediana([100, 200, 400, 600]);
+calcularLaMediana([2000, 200, 1000, 500, 600, 520]);
 
 
 
