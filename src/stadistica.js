@@ -54,3 +54,37 @@ calcularLaMediana([2000, 200, 1000, 500, 600, 520]);
 
 
 
+
+/**     Encontrar la MODA */
+
+
+function calcularModa (lista) {
+    
+    lista.sort( (a, b) => a - b ); //ordeno mi lista de forma de menor a mayor ejem: 1,2,3...
+    let obj = {}, listCount;      //creo dos variables una posse un objeto vacio y otra solo la declare;
+
+    lista.map( elemento => {      //mapeo la lista para agregarle al obj la cantidad de veces que se repite un numero ejem: {'2' = 2, '1' = 3, } .
+
+        if(obj[elemento]){
+            obj[elemento] += 1;
+        } else {
+            obj[elemento] = 1;    //creo un nuevo elemento al objeto y le agrego el valor 1 ejemplo {'1' = 1}
+        }
+
+    })
+
+    listCount = Object.entries(obj);           // combierto mi obj en un array para usar metodos del array.
+    listCount.sort( (a, b ) => a[1] - b[1] )  //ordena mi array
+
+    let variasModas = listCount.filter( (ele) => listCount[listCount.length -1][1] === ele[1]);
+    console.log(variasModas)
+    if(variasModas.length > 0) {
+        console.log(`tienes mas de una moda : ${variasModas[0][0]}`)
+    }else {
+        console.log(`La moda de esta lista: ${lista} es: ${listCount[listCount.length -1][0]}.`)
+    }
+
+    
+}
+
+calcularModa([2,2,2,2,4,6,6,6,6,5,7,8,9,10,10,10,10,23,65])
