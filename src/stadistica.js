@@ -76,15 +76,18 @@ function calcularModa (lista) {
     listCount = Object.entries(obj);           // combierto mi obj en un array para usar metodos del array.
     listCount.sort( (a, b ) => a[1] - b[1] )  //ordena mi array
 
-    let variasModas = listCount.filter( (ele) => listCount[listCount.length -1][1] === ele[1]);
-    console.log(variasModas)
-    if(variasModas.length > 0) {
-        console.log(`tienes mas de una moda : ${variasModas[0][0]}`)
+    let variasModas = listCount.filter( (ele) => listCount[listCount.length -1][1] === ele[1]); //los numeros que se repiten mas con la misma cantidad
+    variasModas.map( (elemento) => elemento.pop() )   //me elimina el ultimo elemento 
+    
+    if(variasModas.length > 1) {
+        console.log(`tienes mas de una moda en esta lita: '${lista}'.
+Las MODAS son: ${variasModas}`)
     }else {
-        console.log(`La moda de esta lista: ${lista} es: ${listCount[listCount.length -1][0]}.`)
+        console.log(`La moda de esta lista: ${lista}.
+La MODA es: ${listCount[listCount.length -1][0]}.`)
     }
 
     
 }
-
 calcularModa([2,2,2,2,4,6,6,6,6,5,7,8,9,10,10,10,10,23,65])
+calcularModa([1,1,1,1,5,5,5,4])
