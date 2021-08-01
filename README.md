@@ -25,3 +25,10 @@ En este curso pondre en practica mis conocimientos sobre JavaScript &lt;3
 - Segundo paso: Implementar las formulas en JS
 - Tercer paso: Crear funciones en JS
 - Cuarto paso: Integrar JS en HTML (reto)
+
+## Taller #4: Salarios de Paises
+
+- Primer paso: Definir las formulas
+- Segundo paso: Implementar las formulas en JS
+- Tercer paso: Crear funciones en JS
+- Cuarto paso: Integrar JS en HTML (reto)
