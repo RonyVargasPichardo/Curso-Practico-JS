@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./interes.css">
+    <title>Interes Simple | Calculadora </title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h3>Taller #4: Calcular el Interes Simple</h3>
+
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Calcular Interes Simple</h2>
+            <h3>Escribe los datos</h3>
+            <form action="">
+                <label for="capital">Capital</label>
+                <input type="number" name="capital" id="capital">
+                <h4 class="tiempo">Tiempo</h4><hr>
+                <label for="anios">Años</label>
+                <input type="number" name="anios" id="anios">
+                <label for="meses">Meses</label>
+                <input type="number" name="meses" id="meses">
+                <label for="tasa">Tasa de Interes</label>
+                <input type="number" name="tasa" id="tasa">
+                <button type="button" class="btnInteres" onclick="CalcularTasaDeInteres()">Calcular Interes Simple</button>
+            </form>   
+            <div class="container-valor-interes">
+                <fieldset>
+                    <legend>Result</legend>
+                    <p id="resultInteres"></p>
+                </fieldset>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <span>By | Rony Vargas</span>
+        </nav>
+    </footer>
+    <script src="./interes.js"></script>
+</body>
+</html>
